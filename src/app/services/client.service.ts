@@ -6,13 +6,14 @@ import { environment } from 'src/environments/environment.prod';
 @Injectable({
   providedIn: 'root'
 })
-export class CommandeService {
+export class ClientService {
 
   constructor(private http : HttpClient) { }
 
 
-  public getMyAllCommandesRegistred() : Observable<any>{
-    return this.http.post<any>(environment.backendHost+"me", "")
+
+  public getMyClients(): Observable<any>{
+    return this.http.get<any>(environment.backendHost+"commercial/clients/all")
   }
 
 

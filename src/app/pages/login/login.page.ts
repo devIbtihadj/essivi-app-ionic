@@ -45,16 +45,6 @@ export class LoginPage implements OnInit {
 
 
 
-
-
-
-
-
-
-
-
-
-
   async presentToast() {
     const toast = await this.toastController.create({
       message: 'Email ou mot de passe incorrect!',

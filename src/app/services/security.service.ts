@@ -39,8 +39,9 @@ export class SecurityService {
   }
 
   public async  getToken() : Promise<string>{
-    return await this.storage.get('name');
+    return await this.storage.get('token');
   }
+
 
   public async clear(){
     await this.storage.clear();
@@ -51,8 +52,8 @@ export class SecurityService {
     return this.getToken();
   }
 
-  public me() : Observable<any>{
-    return this.http.post<any>(environment.backendHost+"me", "")
+  public me(id : number) : Observable<any>{
+    return this.http.post<any>(environment.backendHost+"auth/me/"+id, "")
   }
 
 

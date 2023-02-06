@@ -21,7 +21,8 @@ import { Drivers, Storage } from '@ionic/storage';
     HttpClientModule,
     IonicStorageModule.forRoot({
       name: 'local_db',
-      driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]
+      driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage],
+      size:100,
     })
 ],
 
