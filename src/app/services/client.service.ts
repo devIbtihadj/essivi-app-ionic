@@ -12,8 +12,8 @@ export class ClientService {
 
 
 
-  public getMyClients(): Observable<any>{
-    return this.http.get<any>(environment.backendHost+"commercial/clients/all")
+  public getMyClients(id : number): Observable<any>{
+    return this.http.get<any>(environment.backendHost+"commercial/"+id+"/clients/all")
   }
 
 

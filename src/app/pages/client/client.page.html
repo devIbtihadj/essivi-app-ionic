@@ -13,7 +13,265 @@
 
 
 <ion-content class="ion-padding">
-    <p>{{ message }}</p>
+
+
+    <ion-card color="light" *ngFor="let c of clients">
+        <div class="img-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.R9HMSxN_IRyxw9-iE1usugHaHU?pid=ImgDet&rs=1" />
+            <ion-button color="light">
+                <ion-icon slot="icon-only" name="camera-outline" color="medium">
+                </ion-icon>
+            </ion-button>
+        </div>
+        <ion-card-content class="ion-text-center">
+            <h2 class="clientName">{{c.prenom}} {{c.nom}}</h2>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="call-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.numTel}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="location-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.quartier}}, {{c.longitude}} - {{c.latitude}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="calendar-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.dateEnrollement | date: 'dd/MM/yyyy'}}</p>
+                </div>
+            </ion-text>
+
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card color="light" *ngFor="let c of clients">
+        <div class="img-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.R9HMSxN_IRyxw9-iE1usugHaHU?pid=ImgDet&rs=1" />
+            <ion-button color="light">
+                <ion-icon slot="icon-only" name="camera-outline" color="medium">
+                </ion-icon>
+            </ion-button>
+        </div>
+        <ion-card-content class="ion-text-center">
+            <h2 class="clientName">{{c.prenom}} {{c.nom}}</h2>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="call-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.numTel}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="location-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.quartier}}, {{c.longitude}} - {{c.latitude}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="calendar-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.dateEnrollement | date: 'dd/MM/yyyy'}}</p>
+                </div>
+            </ion-text>
+
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card color="light" *ngFor="let c of clients">
+        <div class="img-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.R9HMSxN_IRyxw9-iE1usugHaHU?pid=ImgDet&rs=1" />
+            <ion-button color="light">
+                <ion-icon slot="icon-only" name="camera-outline" color="medium">
+                </ion-icon>
+            </ion-button>
+        </div>
+        <ion-card-content class="ion-text-center">
+            <h2 class="clientName">{{c.prenom}} {{c.nom}}</h2>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="call-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.numTel}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="location-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.quartier}}, {{c.longitude}} - {{c.latitude}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="calendar-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.dateEnrollement | date: 'dd/MM/yyyy'}}</p>
+                </div>
+            </ion-text>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card color="light" *ngFor="let c of clients">
+        <div class="img-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.R9HMSxN_IRyxw9-iE1usugHaHU?pid=ImgDet&rs=1" />
+            <ion-button color="light">
+                <ion-icon slot="icon-only" name="camera-outline" color="medium">
+                </ion-icon>
+            </ion-button>
+        </div>
+        <ion-card-content class="ion-text-center">
+            <h2 class="clientName">{{c.prenom}} {{c.nom}}</h2>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="call-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.numTel}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="location-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.quartier}}, {{c.longitude}} - {{c.latitude}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="calendar-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.dateEnrollement | date: 'dd/MM/yyyy'}}</p>
+                </div>
+            </ion-text>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card color="light" *ngFor="let c of clients">
+        <div class="img-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.R9HMSxN_IRyxw9-iE1usugHaHU?pid=ImgDet&rs=1" />
+            <ion-button color="light">
+                <ion-icon slot="icon-only" name="camera-outline" color="medium">
+                </ion-icon>
+            </ion-button>
+        </div>
+        <ion-card-content class="ion-text-center">
+            <h2 class="clientName">{{c.prenom}} {{c.nom}}</h2>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="call-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.numTel}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="location-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.quartier}}, {{c.longitude}} - {{c.latitude}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="calendar-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.dateEnrollement | date: 'dd/MM/yyyy'}}</p>
+                </div>
+            </ion-text>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card color="light" *ngFor="let c of clients">
+        <div class="img-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.R9HMSxN_IRyxw9-iE1usugHaHU?pid=ImgDet&rs=1" />
+            <ion-button color="light">
+                <ion-icon slot="icon-only" name="camera-outline" color="medium">
+                </ion-icon>
+            </ion-button>
+        </div>
+        <ion-card-content class="ion-text-center">
+            <h2 class="clientName">{{c.prenom}} {{c.nom}}</h2>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="call-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.numTel}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="location-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.quartier}}, {{c.longitude}} - {{c.latitude}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="calendar-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.dateEnrollement | date: 'dd/MM/yyyy'}}</p>
+                </div>
+            </ion-text>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card color="light" *ngFor="let c of clients">
+        <div class="img-wrapper">
+            <img src="https://th.bing.com/th/id/OIP.R9HMSxN_IRyxw9-iE1usugHaHU?pid=ImgDet&rs=1" />
+            <ion-button color="light">
+                <ion-icon slot="icon-only" name="camera-outline" color="medium">
+                </ion-icon>
+            </ion-button>
+        </div>
+        <ion-card-content class="ion-text-center">
+            <h2 class="clientName">{{c.prenom}} {{c.nom}}</h2>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="call-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.numTel}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="location-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.quartier}}, {{c.longitude}} - {{c.latitude}}</p>
+                </div>
+            </ion-text>
+            <ion-text color="medium">
+                <div style="display: flex;" class="ion-justify-content-center">
+                    <ion-icon name="calendar-outline" color="medium">
+                    </ion-icon>
+                    <p>{{c.dateEnrollement | date: 'dd/MM/yyyy'}}</p>
+                </div>
+            </ion-text>
+
+        </ion-card-content>
+    </ion-card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <ion-modal trigger="open-modalClient" (willDismiss)="onWillDismiss($event)">
         <ng-template>
             <ion-header>

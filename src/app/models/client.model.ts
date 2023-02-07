@@ -1,3 +1,4 @@
+import { CommercialModel } from "./commercial.model"
 import { Commercial_ClientModel } from "./commercial_client.model"
 
 export interface ClientModel{
@@ -9,5 +10,5 @@ export interface ClientModel{
   longitude : string
   quartier : string
   dateEnrollement : Date
-  commercial_client : Commercial_ClientModel
+  commercial : CommercialModel
 }

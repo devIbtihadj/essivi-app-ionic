@@ -1,9 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>livraison</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>livraison</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
+
+    <div *ngFor="let c of commandes">
+        <ion-card class="card card-margin">
+            <ion-card-content class="card-body pt-0c">
+                <div class="widget-49">
+                    <div class="widget-49-title-wrapper">
+                        <div class="widget-49-date-primary">
+                            <span class="widget-49-date-day">{{c.date_voulu_reception | date : 'dd'}}</span>
+                            <span class="widget-49-date-month">{{c.date_voulu_reception | date : 'MMM'}}</span>
+                        </div>
+                        <div class="widget-49-meeting-info">
+                            <span class="widget-49-pro-title">{{c.client.nom | uppercase}} {{c.client.prenom}}</span>
+                            <span class="widget-49-meeting-time">Date : {{c.date_cde | date : 'dd/MM/yyyy'}}</span>
+                        </div>
+                    </div>
+
+                    <ion-button size="small" fill="outline" style="float: right;" (click)="onGetDetails(c.id)">détails
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </ion-button>
+                </div>
+            </ion-card-content>
+        </ion-card>
+    </div>
+
+
+
 
 </ion-content>
