@@ -6,9 +6,19 @@ export interface ClientModel{
   nom : string
   prenom : string
   numTel : string
-  latitude : string
-  longitude : string
+  latitude : number
+  longitude : number
   quartier : string
   dateEnrollement : Date
   commercial : CommercialModel
+}
+
+
+export class clientModelClass{
+  nom! : string
+  prenom! : string
+  numTel! : string
+  latitude! : number
+  longitude! : number
+  quartier! : string
 }

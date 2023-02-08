@@ -9,4 +9,71 @@
 
 <ion-content>
 
+
+    <div *ngFor="let m of filteredMarques">
+
+
+        <ion-button style="color: rgba(4, 4, 183, 0.947);" expand="block" shape="round">
+            <ion-label style="color: white;">
+                {{m}}
+            </ion-label>
+        </ion-button>
+
+
+
+
+
+        <div style="display: flexbox;">
+
+            <ion-card *ngFor="let d of commande.details">
+                <div *ngIf="d.type_vente.marque.libelle_marque==m">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col size="4">
+                                <img src="https://th.bing.com/th/id/OIP.R9HMSxN_IRyxw9-iE1usugHaHU?pid=ImgDet&rs=1" />
+                            </ion-col>
+                            <ion-col size="8">
+                                <ion-card-header>
+                                    <ion-card-subtitle>{{d.type_vente.marque.libelle_marque}}</ion-card-subtitle>
+                                </ion-card-header>
+                                <ion-card-content>
+                                    <ion-text color="white">
+                                        <div style="display: flex;" class="ion-justify-content-space-around">
+                                            <ion-icon name="checkbox-outline"></ion-icon>
+                                            <p>{{d.type_vente.libelle_type_vente}} ({{d.type_vente.qte_composition}}) </p>
+                                        </div>
+                                    </ion-text>
+
+                                    <ion-text color="white">
+                                        <div style="display: flex;" class="ion-justify-content-space-around">
+                                            <ion-icon name="checkbox-outline"></ion-icon>
+                                            <p>Qté {{d.qte}}</p>
+                                        </div>
+                                    </ion-text>
+
+                                    <ion-text color="white">
+                                        <div style="display: flex;" class="ion-justify-content-space-around">
+                                            <ion-icon name="checkbox-outline"></ion-icon>
+                                            <p>Prix unitaire : {{d.type_vente.prix_unit}}</p>
+                                        </div>
+                                    </ion-text>
+                                </ion-card-content>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+            </ion-card>
+
+        </div>
+
+    </div>
+
+
+    <ion-button fill="outline" expand="block" style="padding-top: 5px;" (click)="presentAlert()">
+        <ion-icon name="checkmark-outline"></ion-icon>
+        Valider la commande de : {{somme}} FCFA
+    </ion-button>
+
+
+
 </ion-content>

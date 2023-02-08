@@ -23,7 +23,11 @@ export class CommandeService {
 
 
   public getCommande(id : number): Observable<any>{
-    return this.http.get<any>(environment.backendHost+"/client/commande/"+id)
+    return this.http.get<any>(environment.backendHost+"client/commande/"+id)
+  }
+
+  public livrerCommande(idCml : number, idCde : number): Observable<any>{
+    return this.http.post<any>(environment.backendHost+"livraison/creer/idCml/"+idCml+"/idCde/"+idCde, null)
   }
 
 
