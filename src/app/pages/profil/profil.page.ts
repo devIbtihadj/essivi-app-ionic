@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 import { SecurityService } from 'src/app/services/security.service';
 
 @Component({
@@ -13,7 +14,12 @@ export class ProfilPage implements OnInit {
   nbClients! : string
   nbLivraisons! : string
 
-  constructor(private securityService : SecurityService) { }
+  notifications! : number
+
+  darkTheme! : boolean
+
+  language! : number
+  constructor(private securityService : SecurityService, private alertController : AlertController) { }
 
   ngOnInit() {
     this.onGetCommercialInfo()
@@ -24,6 +30,15 @@ export class ProfilPage implements OnInit {
 
   }
 
+  changePassword(){
+
+
+    this.presentAlert()
+
+
+
+
+  }
   onGetCommercialInfo(){
     this.securityService.getUtilisateurId().then((id)=>{
       this.securityService.me(parseInt(id)).subscribe({
@@ -34,6 +49,21 @@ export class ProfilPage implements OnInit {
         }
       })
     })
+  }
+
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Nouveau mot de passe',
+      buttons: ['OK'],
+      inputs: [
+        {
+          placeholder: 'Saisir ici ...',
+        },
+      ],
+    });
+
+    await alert.present();
   }
 
 }
