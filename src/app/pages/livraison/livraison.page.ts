@@ -26,6 +26,8 @@ export class LivraisonPage implements OnInit {
 
 
   ngOnInit() {
+    this.commandes=[]
+    console.log('init livraison')
   this.onInitMyNotDelivery()
   }
 

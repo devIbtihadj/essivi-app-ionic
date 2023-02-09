@@ -21,6 +21,7 @@ export class ClientPage implements OnInit {
 
   @ViewChild(IonModal) modal! : IonModal;
 
+
   message = 'This modal example uses triggers to automatically open a modal when the button is clicked.';
   name! : string;
   prenom! : string;
@@ -45,6 +46,7 @@ export class ClientPage implements OnInit {
 
 
   ngOnInit() {
+    console.log('init cli')
     this.onGetMyClients()
 
   }
