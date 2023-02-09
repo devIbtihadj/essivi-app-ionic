@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LivraisonPageRoutingModule } from './livraison-routing.module';
+import { DeliverymapPageRoutingModule } from './deliverymap-routing.module';
 
-import { LivraisonPage } from './livraison.page';
+import { DeliverymapPage } from './deliverymap.page';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     FormsModule,
     IonicModule,
-    LivraisonPageRoutingModule,
+    DeliverymapPageRoutingModule,
     RouterModule
   ],
-  declarations: [LivraisonPage]
+  declarations: [DeliverymapPage]
 })
-export class LivraisonPageModule {}
+export class DeliverymapPageModule {}

@@ -28,9 +28,17 @@
                                 "glob": "**/*.svg",
                                 "input": "node_modules/ionicons/dist/ionicons/svg",
                                 "output": "./svg"
+                            },
+                            {
+                                "glob": "**/*",
+                                "input": "node_modules/leaflet/dist/images/",
+                                "output": "./assets"
                             }
                         ],
-                        "styles": ["src/theme/variables.scss", "src/global.scss", "node_modules/aos/dist/aos.css"],
+                        "styles": ["src/theme/variables.scss", "src/global.scss", "node_modules/aos/dist/aos.css",
+                            "node_modules/leaflet/dist/leaflet.css",
+                            "node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css"
+                        ],
                         "scripts": ["node_modules/aos/dist/aos.js"]
                     },
                     "configurations": {

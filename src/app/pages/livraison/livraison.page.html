@@ -23,9 +23,15 @@
                         </div>
                     </div>
 
-                    <ion-button size="small" fill="outline" style="float: right;" (click)="onGetDetails(c.id)">détails
-                        <ion-icon name="chevron-forward-outline"></ion-icon>
-                    </ion-button>
+                    <div style="display: flex; justify-content: space-around;">
+                        <ion-button size="small" fill="outline" style="float: right;" (click)="gotoDeliveryMap(c.client)">Map
+                            <ion-icon name="map-outline"></ion-icon>
+                        </ion-button>
+                        <ion-button size="small" fill="outline" style="float: right;" (click)="onGetDetails(c.id)">détails
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </ion-button>
+                    </div>
+
                 </div>
             </ion-card-content>
         </ion-card>

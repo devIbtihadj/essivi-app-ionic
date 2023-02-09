@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ClientModel } from 'src/app/models/client.model';
 import { CommandeModel } from 'src/app/models/commande.model';
 import { CommandeService } from 'src/app/services/commande.service';
 import { SecurityService } from 'src/app/services/security.service';
@@ -29,6 +30,16 @@ export class LivraisonPage implements OnInit {
   }
 
 
+
+  gotoDeliveryMap(client : ClientModel){
+    console.log(client.latitude)
+    this.router.navigateByUrl('/deliverymap', {
+      state : {
+        lon : client.longitude,
+        lat : client.latitude
+      }
+    })
+  }
 
 
   onGetDetails(id : number){

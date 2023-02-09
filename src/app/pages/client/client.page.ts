@@ -5,8 +5,12 @@ import { OverlayEventDetail } from '@ionic/core/components';
 import { ClientModel, clientModelClass } from 'src/app/models/client.model';
 import { ClientService } from 'src/app/services/client.service';
 import { SecurityService } from 'src/app/services/security.service';
-
 import { Geolocation } from '@capacitor/geolocation';
+
+
+const iconRetinaUrl = 'assets/marker-icon-2x.png';
+const iconUrl = 'assets/marker-icon.png';
+const shadowUrl = 'assets/marker-shadow.png';
 
 @Component({
   selector: 'app-client',
@@ -27,6 +31,11 @@ export class ClientPage implements OnInit {
 
   clientAdd : clientModelClass = new clientModelClass()
 
+  isModalOpen = false;
+
+
+
+
   constructor(private clientService : ClientService, private securityService : SecurityService,
     private toastController : ToastController, private router : Router
     ) { }
@@ -36,8 +45,8 @@ export class ClientPage implements OnInit {
 
 
   ngOnInit() {
-
     this.onGetMyClients()
+
   }
 
 
@@ -117,6 +126,22 @@ export class ClientPage implements OnInit {
 
 
 
+
+
+  }
+
+
+
+  gotoMaps(client : ClientModel){
+    console.log(client.latitude)
+    this.router.navigateByUrl('/maps', {
+      state : {
+        lon : client.longitude,
+        lat : client.latitude
+      }
+    }).then((bool)=>{
+      console.log(bool)
+    }).catch((err)=> console.log(err))
   }
 
 
@@ -129,9 +154,9 @@ export class ClientPage implements OnInit {
 
 
 
-
-
-
+setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
 
 
 
@@ -150,4 +175,7 @@ export class ClientPage implements OnInit {
       this.message = `Hello, ${ev.detail.data}!`;
     }
   }
+
+
+
 }
