@@ -33,12 +33,12 @@ export class SecurityGuard implements CanActivate {
       return true;
 
 
-      if(this.securityService.getToken() != null){
+      /*if(this.securityService.getToken() != null){
         return true
       }else{
         this.router.navigate(['/login'])
         return false;
-      }
+      }*/
 
 
   }
