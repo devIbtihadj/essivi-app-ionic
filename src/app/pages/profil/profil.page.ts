@@ -22,9 +22,19 @@ export class ProfilPage implements OnInit {
   constructor(private securityService : SecurityService, private alertController : AlertController) { }
 
   ngOnInit() {
-    this.onGetCommercialInfo()
-    console.log('init profil')
+    
   }
+
+
+  ionViewWillLeave(){
+    console.log("Prodil ionViewWillLeave")
+  }
+
+  ionViewWillEnter(){
+    this.onGetCommercialInfo()
+    console.log("Profil ionViewWillEnter")
+  }
+
 
   onClick(){
 

@@ -52,6 +52,14 @@ export class DetailPage implements OnInit {
 
 
 
+  ionViewWillLeave(){
+    console.log("Detail ionViewWillLeave")
+  }
+
+  ionViewWillEnter(){
+    console.log("Detail ionViewWillEnter")
+  }
+
 
 
 

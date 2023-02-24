@@ -46,7 +46,15 @@ export class ClientPage implements OnInit {
 
 
   ngOnInit() {
-    console.log('init cli')
+    
+  }
+
+  ionViewWillLeave(){
+    console.log("client ionViewWillLeave")
+  }
+
+  ionViewWillEnter(){
+    console.log("Client ionViewWillEnter")
     this.onGetMyClients()
 
   }

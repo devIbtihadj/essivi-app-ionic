@@ -26,11 +26,17 @@ export class LivraisonPage implements OnInit {
 
 
   ngOnInit() {
-    this.commandes=[]
-    console.log('init livraison')
-  this.onInitMyNotDelivery()
   }
 
+  ionViewWillLeave(){
+    console.log("Livraison ionViewWillLeave")
+    this.commandes = []
+  }
+
+  ionViewWillEnter(){
+    console.log("Livraison ionViewWillEnter")
+    this.onInitMyNotDelivery()
+  }
 
 
   gotoDeliveryMap(client : ClientModel){
