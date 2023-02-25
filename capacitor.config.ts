@@ -4,7 +4,18 @@ const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
   appName: 'EssiviApp',
   webDir: 'www',
-  bundledWebRuntime: false
+  bundledWebRuntime: false,
+  cordova : {
+    accessOrigins : ["*"],
+  }, 
+  server : {
+    cleartext : true
+  },
+  plugins : {
+    CapacitorHttp : {
+      enabled : false
+    }
+  }
 };
 
 export default config;

@@ -19,4 +19,12 @@ export class DashboardPage implements OnInit {
   ngOnInit() {
   }
 
+
+  ionViewWillLeave(){
+    console.log("Dashboard ionViewWillLeave")
+  }
+
+  ionViewWillEnter(){
+    console.log("Dashboard ionViewWillEnter")
+  }
 }

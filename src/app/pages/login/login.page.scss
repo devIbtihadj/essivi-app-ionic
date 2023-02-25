@@ -30,7 +30,9 @@ ion-content {
 }
 
 ion-item {
-    --ion-background-color: transparent!important;
+    // IB MODIF --ion-background-color: transparent!important;
+
+    --ion-background-color: transparent;
 }
 
 .flex {

@@ -58,7 +58,7 @@ export class DeliverymapPage implements OnInit {
    async onInitMap(lat : number, lon : number) {
 
 
-    const coordinates = await Geolocation.getCurrentPosition();
+  const coordinates = await Geolocation.getCurrentPosition();
 
    this.commercialLat= coordinates.coords.latitude,
    this.commercialLon = coordinates.coords.longitude,

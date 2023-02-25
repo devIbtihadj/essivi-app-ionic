@@ -11,7 +11,9 @@ import { Storage } from '@ionic/storage-angular';
 export class SecurityService {
 
   requestHeader = new HttpHeaders(
-    { "No-Auth" : "True"}
+    { "No-Auth" : "True",
+    'Content-Type': 'application/json'
+    }
   );
 
   private _storage: Storage | null = null;
@@ -58,7 +60,7 @@ export class SecurityService {
 
 
   login(loginM : Login) : Observable<any>{
-    return this.http.post<any>(environment.backendHost+"auth/login", loginM, {headers : this.requestHeader})
+    return this.http.post<any>(environment.backendHost+"auth/login", JSON.stringify(loginM), {headers : this.requestHeader})
 
   }
 

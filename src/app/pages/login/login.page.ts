@@ -31,7 +31,7 @@ export class LoginPage implements OnInit {
         this.securityService.setToken(data.data.token)
         this.router.navigate(['/home/dashboard'])
       }, error : (err)=>{
-         this.presentToast()
+         this.presentToast(err)
         console.log(err)
       }
     })
@@ -45,9 +45,9 @@ export class LoginPage implements OnInit {
 
 
 
-  async presentToast() {
+  async presentToast(backendIp : string) {
     const toast = await this.toastController.create({
-      message: 'Email ou mot de passe incorrect!',
+      message: JSON.stringify(backendIp)+'',
       duration: 3000,
       icon : "sad-outline",
       cssClass: 'custom-toast',
