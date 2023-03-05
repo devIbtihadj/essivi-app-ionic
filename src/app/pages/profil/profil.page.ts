@@ -1,3 +1,6 @@
+import { ClientService } from './../../services/client.service';
+import { CommandeService } from './../../services/commande.service';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { SecurityService } from 'src/app/services/security.service';
@@ -18,13 +21,29 @@ export class ProfilPage implements OnInit {
 
   darkTheme! : boolean
 
+
   language! : number
-  constructor(private securityService : SecurityService, private alertController : AlertController) { }
+  constructor(private securityService : SecurityService, private alertController : AlertController, private router : Router, 
+    private commercialService : CommandeService, private clienService : ClientService, private commandeService:CommandeService) { }
 
   ngOnInit() {
     
   }
 
+
+  onInitParam(idCOm : number){
+    this.clienService.getMyClients(idCOm).subscribe({
+      next :(data)=>{
+        this.nbClients=data.data.length
+      }
+    })
+
+    this.commandeService.getCommercialLivraisons(idCOm).subscribe({
+      next:(data)=>{
+        this.nbLivraisons=data.data.length
+      }
+    })
+  }
 
   ionViewWillLeave(){
     console.log("Prodil ionViewWillLeave")
@@ -36,6 +55,9 @@ export class ProfilPage implements OnInit {
   }
 
 
+  geToLogin(){
+    this.router.navigateByUrl('/login')
+  }
   onClick(){
 
   }
@@ -56,6 +78,7 @@ export class ProfilPage implements OnInit {
           console.log(data)
           this.nom = data.data.nom
           this.prenom = data.data.prenom
+          this.onInitParam(parseInt(id))
         }
       })
     })

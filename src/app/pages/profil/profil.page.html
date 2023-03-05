@@ -5,12 +5,12 @@
 
         <div class="space-between">
             <div class="followings">
-                <ion-badge color="primary" mode="ios">42</ion-badge>
+                <ion-badge color="primary" mode="ios">{{nbClients}}</ion-badge>
                 <p>Clients</p>
             </div>
 
             <div class="followings">
-                <ion-badge color="primary" mode="ios">102</ion-badge>
+                <ion-badge color="primary" mode="ios">{{nbLivraisons}}</ion-badge>
                 <p>Livraisons</p>
             </div>
         </div>
@@ -128,6 +128,9 @@
         </ion-item>
         <ion-item (click)="changePassword()">
             <ion-label>Changer le mot de passe</ion-label>
+        </ion-item>
+        <ion-item (click)="geToLogin()">
+            <ion-label>Se deconnecter</ion-label>
         </ion-item>
     </ion-list>
 </ion-content>

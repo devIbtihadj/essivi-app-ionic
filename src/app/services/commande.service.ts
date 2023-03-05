@@ -31,5 +31,11 @@ export class CommandeService {
   }
 
 
+  public getCommercialLivraisons(idCom : number):Observable<any>{
+    return this.http.get<any>(environment.backendHost+"livraison/get/delivered/"+idCom)
+  }
+
+
+
 
 }

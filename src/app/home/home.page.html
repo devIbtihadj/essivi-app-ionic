@@ -3,15 +3,14 @@
         <ion-tab-button tab="dashboard">
             <ion-icon name="home" aria-hidden="true"></ion-icon>
             <ion-label>Home</ion-label>
-            <ion-badge>6</ion-badge>
         </ion-tab-button>
 
-        <ion-tab-button tab="commande" (click)="changePageToCommande()">
+    <!--  <ion-tab-button tab="commande" (click)="changePageToCommande()">
             <ion-icon name="people" aria-hidden="true"></ion-icon>
             <ion-label>Commandes</ion-label>
         </ion-tab-button>
-
-        <ion-tab-button tab="client" (click)="changePageToClient()">
+-->  
+        <ion-tab-button tab="client">
             <ion-icon name="people" aria-hidden="true"></ion-icon>
             <ion-label>Clients</ion-label>
         </ion-tab-button>
@@ -19,6 +18,7 @@
         <ion-tab-button tab="livraison" (click)="onClick()">
             <ion-icon name="bicycle" aria-hidden="true"></ion-icon>
             <ion-label>Livraisons</ion-label>
+            <ion-badge *ngIf="commandes.length>0" >{{commandes.length}}</ion-badge>
         </ion-tab-button>
 
         <ion-tab-button tab="profil">

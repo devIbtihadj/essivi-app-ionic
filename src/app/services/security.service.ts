@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -18,7 +19,7 @@ export class SecurityService {
 
   private _storage: Storage | null = null;
 
-  constructor(private http : HttpClient, private storage : Storage) {
+  constructor(private http : HttpClient, private storage : Storage, private router : Router) {
     this.init()
   }
   async init() {
@@ -41,7 +42,13 @@ export class SecurityService {
   }
 
   public async  getToken() : Promise<string>{
+    try{
+      
     return await this.storage.get('token');
+    }catch{
+      this.router.navigateByUrl('/login')
+      return await this.storage.get('token');
+    }
   }
 
 
